@@ -1,12 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "me.pixfumy.perfect_ssg.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "entity.MobDropMaxLootMixin",
+    "entity.VillagerEntityMixin",
+    "entity.EnderDragonEntityMixin"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

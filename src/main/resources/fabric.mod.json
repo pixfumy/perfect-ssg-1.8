@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "${archivesBaseName}",
+  "id": "${mod_id}",
   "version": "${version}",
   "name": "Perfect SSG",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "pixfumy"
   ],
   "contact": {
     "homepage": "https://legacyfabric.net/",
     "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
   },
+  "accessWidener": "perfect_ssg.accesswidener",
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/perfect_ssg/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -24,7 +25,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.12.0",
-    "minecraft": "1.8.9"
+    "minecraft": "1.8.x"
   },
   "suggests": {
     "another-mod": "*"

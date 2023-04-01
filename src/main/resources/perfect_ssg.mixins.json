@@ -6,7 +6,8 @@
   "mixins": [
     "entity.MobDropMaxLootMixin",
     "entity.VillagerEntityMixin",
-    "entity.EnderDragonEntityMixin"
+    "entity.EnderDragonEntityMixin",
+    "entity.TNTDropAllMixin"
   ],
   "client": [
   ],

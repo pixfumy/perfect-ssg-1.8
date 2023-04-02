@@ -10,7 +10,8 @@
     "EnderDragonEntityMixin",
     "TNTDropAllMixin",
     "VillagerRoutingMixin",
-    "SpawnOneSilverfishMixin"
+    "SpawnOneSilverfishMixin",
+    "ItemDropRNGMixin"
   ],
   "client": [
   ],

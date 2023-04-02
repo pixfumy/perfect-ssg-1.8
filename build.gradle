@@ -41,6 +41,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.legacyfabric:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation files("gradle/org_legacy_jst_patcher-1.7.30.jar")
 
 	// You can retrieve a specific api module using this notation.
 	//	modImplementation(legacyFabricApi.module("legacy-fabric-item-groups-v1", project.fabric_version))

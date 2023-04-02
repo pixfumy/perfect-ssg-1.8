@@ -1,5 +1,8 @@
 package me.pixfumy.perfect_ssg.mixin.dragon;
 
+import me.pixfumy.perfect_ssg.PerfectSSG;
+import me.pixfumy.perfect_ssg.Pingable;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonPart;
@@ -26,7 +29,7 @@ public abstract class EnderDragonEntityMixin extends Entity {
 
     @Shadow private Entity target;
 
-    private int chargeCoolDown = 300;
+    private int chargeCoolDown = PerfectSSG.dragonInitialWaitTicks;
 
     public EnderDragonEntityMixin(World world) {
         super(world);
@@ -39,12 +42,15 @@ public abstract class EnderDragonEntityMixin extends Entity {
 
     @Inject(method = "setAngry", at = @At("HEAD"))
     private void setChargeCoolDown(EnderDragonPart source, DamageSource angry, float par3, CallbackInfoReturnable<Boolean> cir) {
-        this.chargeCoolDown = 120;
+        this.chargeCoolDown = PerfectSSG.dragonBetweenChargesWaitTicks;
     }
 
     @Redirect(method = "method_2906", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 0))
     private int betterChargeChance(Random instance, int bound) {
-        return this.chargeCoolDown > 0 ? 1 : Math.round(instance.nextFloat() - 0.25f);
+        if (this.chargeCoolDown > 0) {
+            return 1;
+        }
+        return instance.nextFloat() <= PerfectSSG.dragonChargeChance ? 0 : 1;
     }
 
     /**
@@ -63,5 +69,6 @@ public abstract class EnderDragonEntityMixin extends Entity {
             d5 = 10.0;
         }
         this.field_3751 = this.target.getBoundingBox().minY + d5;
+        ((Pingable) MinecraftClient.getInstance().inGameHud.debugHud).notifyListeners();
     }
 }

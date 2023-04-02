@@ -3,16 +3,15 @@
   "id": "${mod_id}",
   "version": "${version}",
   "name": "Perfect SSG",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "I made the dragon charge.",
   "authors": [
     "pixfumy"
   ],
   "contact": {
-    "homepage": "https://legacyfabric.net/",
-    "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
+    "homepage": "github.com/pixfumy"
   },
   "accessWidener": "perfect_ssg.accesswidener",
-  "license": "CC0-1.0",
+  "license": "GNU GPL3.0",
   "icon": "assets/perfect_ssg/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -25,7 +24,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.12.0",
-    "minecraft": "1.8.x"
+    "minecraft": "1.8"
   },
   "suggests": {
     "another-mod": "*"

@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(Explosion.class)
-public abstract class TNTDropAllMixin {
+public abstract class TNTDropsMixin {
     @Shadow @Final private Entity causingEntity;
 
     /**
@@ -21,7 +21,7 @@ public abstract class TNTDropAllMixin {
     @ModifyArg(method = "affectWorld", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;randomDropAsItem(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;FI)V"))
     private float changeTo1(float f) {
         if (this.causingEntity instanceof TntEntity) {
-            return 0.5F;
+            return 0.4F;
         }
         return f;
     }

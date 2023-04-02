@@ -4,10 +4,11 @@
   "package": "me.pixfumy.perfect_ssg.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "entity.MobDropMaxLootMixin",
-    "entity.VillagerEntityMixin",
-    "entity.EnderDragonEntityMixin",
-    "entity.TNTDropAllMixin"
+    "MobDropMaxLootMixin",
+    "VillagerEntityMixin",
+    "EnderDragonEntityMixin",
+    "TNTDropAllMixin",
+    "VillagerRoutingMixin"
   ],
   "client": [
   ],

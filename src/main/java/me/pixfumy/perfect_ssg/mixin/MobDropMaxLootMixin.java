@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin.entity;
+package me.pixfumy.perfect_ssg.mixin;
 
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.EndermanEntity;

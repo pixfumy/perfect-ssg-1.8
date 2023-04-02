@@ -1,5 +1,6 @@
 package me.pixfumy.perfect_ssg.mixin.villager;
 
+import me.pixfumy.perfect_ssg.IVillager;
 import net.minecraft.entity.PathAwareEntity;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -25,7 +26,7 @@ public abstract class VillagerRoutingMixin {
 
     @Inject(method = "canStart", at = @At(value = "HEAD"), cancellable = true)
     private void setOptimalTarget(CallbackInfoReturnable<Boolean> cir) {
-        if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks) {
+        if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks && !((IVillager)this.mob).hasTraded()) {
             if (this.optimalTarget == null) {
                 Random random = new Random();
                 optimalTarget = new Vec3d(-501 - random.nextInt(8), this.mob.y, -417 + random.nextInt(5) - 3);

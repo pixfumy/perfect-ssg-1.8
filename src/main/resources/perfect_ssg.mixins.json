@@ -11,7 +11,8 @@
     "TNTDropAllMixin",
     "VillagerRoutingMixin",
     "SpawnOneSilverfishMixin",
-    "ItemDropRNGMixin"
+    "ItemDropRNGMixin",
+    "StopHostileEntitySpawnsMixin"
   ],
   "client": [
   ],

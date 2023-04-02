@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin;
+package me.pixfumy.perfect_ssg.mixin.dragon;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
@@ -49,7 +49,7 @@ public abstract class EnderDragonEntityMixin extends Entity {
 
     /**
      * Fixes the bug where the dragon calculates its target distance based on its old target, resulting in
-     * it needing to roll a player as a target twice in a row (halfing the chance of a charge).
+     * it needing to roll a player as a target twice in a row (halving the chance of a charge).
      */
     @Inject(method = "method_2906", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/boss/dragon/EnderDragonEntity;target:Lnet/minecraft/entity/Entity;", ordinal = 0, shift = At.Shift.AFTER))
     private void dontDoubleCharge(CallbackInfo ci) {

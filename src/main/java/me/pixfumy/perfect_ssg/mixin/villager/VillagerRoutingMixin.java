@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin;
+package me.pixfumy.perfect_ssg.mixin.villager;
 
 import net.minecraft.entity.PathAwareEntity;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;

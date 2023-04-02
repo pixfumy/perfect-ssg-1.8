@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin;
+package me.pixfumy.perfect_ssg.mixin.hostile_mob;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.HostileEntity;

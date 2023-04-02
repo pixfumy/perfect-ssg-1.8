@@ -1,11 +1,10 @@
-package me.pixfumy.perfect_ssg.mixin;
+package me.pixfumy.perfect_ssg.mixin.loot;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.predicate.EntityPredicate;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;

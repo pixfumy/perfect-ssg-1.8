@@ -5,15 +5,15 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "access.SpawnerBlockEntityBehaviorAccess",
-    "MobDropMaxLootMixin",
-    "VillagerEntityMixin",
-    "EnderDragonEntityMixin",
-    "TNTDropsMixin",
-    "TNTDropsPressurePlateMixin",
-    "VillagerRoutingMixin",
-    "SpawnOneSilverfishMixin",
-    "ItemDropRNGMixin",
-    "StopHostileEntitySpawnsMixin"
+    "loot.MobDropMaxLootMixin",
+    "villager.VillagerEntityMixin",
+    "dragon.EnderDragonEntityMixin",
+    "loot.tnt.TNTDropsMixin",
+    "loot.tnt.TNTDropsPressurePlateMixin",
+    "villager.VillagerRoutingMixin",
+    "hostile_mob.SpawnOneSilverfishMixin",
+    "loot.ItemDropRNGMixin",
+    "hostile_mob.StopHostileEntitySpawnsMixin"
   ],
   "client": [
   ],

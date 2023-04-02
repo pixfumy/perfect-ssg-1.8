@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin;
+package me.pixfumy.perfect_ssg.mixin.hostile_mob;
 
 import me.pixfumy.perfect_ssg.mixin.access.SpawnerBlockEntityBehaviorAccess;
 import net.minecraft.block.entity.SpawnerBlockEntityBehavior;

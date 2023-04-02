@@ -12,6 +12,7 @@ import java.util.Random;
 public class MobDropMaxLootMixin {
     @Redirect(method = "dropLoot", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I"))
     private int dropMaxLoot(Random instance, int bound) {
+        System.out.println("PerfectSSG mod dropping max mob loot.");
         return bound - 1;
     }
 }

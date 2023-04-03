@@ -29,7 +29,9 @@ public abstract class VillagerRoutingMixin {
         if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks && !((IVillager)this.mob).hasTraded()) {
             if (this.optimalTarget == null) {
                 Random random = new Random();
-                optimalTarget = new Vec3d(-501 - random.nextInt(8), this.mob.y, -417 + random.nextInt(5) - 3);
+                do {
+                    optimalTarget = new Vec3d(-501 - random.nextInt(8), this.mob.y, -417 + random.nextInt(5) - 3);
+                } while ((optimalTarget.x == -501 && optimalTarget.z >= -414)); // don't pick any pos within the church
             }
             if (this.mob.distanceTo(optimalTarget.x, optimalTarget.y, optimalTarget.z) > 1) {
                 this.ignoringChance = true; // makes it so canStart does not return false early
@@ -39,7 +41,7 @@ public abstract class VillagerRoutingMixin {
 
     @Redirect(method = "canStart", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/RandomVectorGenerator;method_2799(Lnet/minecraft/entity/PathAwareEntity;II)Lnet/minecraft/util/math/Vec3d;"))
     private Vec3d routeToOptimalTarget(PathAwareEntity mob, int i, int j) {
-        if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks) {
+        if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks && !((IVillager)this.mob).hasTraded()) {
             return this.optimalTarget;
         }
         return RandomVectorGenerator.method_2799(mob, i, j);

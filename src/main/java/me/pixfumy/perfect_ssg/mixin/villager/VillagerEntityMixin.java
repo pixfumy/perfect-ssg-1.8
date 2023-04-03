@@ -27,8 +27,8 @@ public class VillagerEntityMixin implements IVillager {
         return -1;
     }
 
-    @Inject(method = "trade", at = @At("HEAD"))
-    private void setTraded(TradeOffer tradeOffer, CallbackInfo ci) {
+    @Inject(method = "getOffers()V", at = @At("HEAD"))
+    private void setTraded(CallbackInfo ci) {
         this.traded = true;
     }
 

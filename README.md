@@ -3,7 +3,7 @@
 ### Not compatible with optifine currently, I'm not sure why.
 
 ## Features
-- The eye trade is always 7 emeralds
+- The gold trade from a cleric is always 8 gold, the eye trade is always 7 emeralds
 - The cleric will path towards the blacksmith for a more linear route.
 - Endermen will always drop a pearl.
 - The dragon charge probability and cooldowns between charges can be set via config file, `.minecraft/config/perfect_ssg.properties`.

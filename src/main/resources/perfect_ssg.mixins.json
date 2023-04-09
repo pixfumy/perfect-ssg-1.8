@@ -10,6 +10,7 @@
     "dragon.ShorterEndCrystalsMixin",
     "loot.MobDropMaxLootMixin",
     "loot.GuaranteedFlintMixin",
+    "loot.Guaranteed3WoolMixin",
     "loot.tnt.TNTItemRNGMixin",
     "loot.tnt.TNTDropsMixin",
     "loot.tnt.TNTDropsPressurePlateMixin",

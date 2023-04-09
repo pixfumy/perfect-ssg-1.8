@@ -1,7 +1,6 @@
 package me.pixfumy.perfect_ssg.mixin.villager;
 
 import me.pixfumy.perfect_ssg.IVillager;
-import net.minecraft.class_2669;
 import net.minecraft.entity.PathAwareEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.GoalSelector;
@@ -23,14 +22,14 @@ public abstract class VillagerEntityMixin extends PathAwareEntity implements IVi
         super(world);
     }
 
-    @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "net/minecraft/class_2669", ordinal = 47))
-    private static class_2669 setGoldTradeTo8(int j, int i) {
-        return new class_2669(j, j);
+    @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "Lnet/minecraft/entity/passive/VillagerEntity$Cost;<init>(II)V", ordinal = 47))
+    private static VillagerEntity.Cost setGoldTradeTo8(int j, int i) {
+        return new VillagerEntity.Cost(j, j);
     }
 
-    @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "net/minecraft/class_2669", ordinal = 50))
-    private static class_2669 setEyeTradeTo7Emeralds(int j, int i) {
-        return new class_2669(j, j);
+    @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "Lnet/minecraft/entity/passive/VillagerEntity$Cost;<init>(II)V", ordinal = 50))
+    private static VillagerEntity.Cost setEyeTradeTo7Emeralds(int j, int i) {
+        return new VillagerEntity.Cost(j, j);
     }
 
     @ModifyArg(method = "<init>(Lnet/minecraft/world/World;I)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/ai/goal/GoalSelector;add(ILnet/minecraft/entity/ai/goal/Goal;)V", ordinal = 12))

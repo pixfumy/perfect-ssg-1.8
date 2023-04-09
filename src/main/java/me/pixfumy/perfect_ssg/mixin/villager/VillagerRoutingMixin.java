@@ -26,15 +26,17 @@ public abstract class VillagerRoutingMixin {
 
     @Inject(method = "canStart", at = @At(value = "HEAD"), cancellable = true)
     private void setOptimalTarget(CallbackInfoReturnable<Boolean> cir) {
-        if (this.mob instanceof VillagerEntity && ((VillagerEntity)this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks && !((IVillager)this.mob).hasTraded()) {
-            if (this.optimalTarget == null) {
-                Random random = new Random();
-                do {
-                    optimalTarget = new Vec3d(-501 - random.nextInt(8), this.mob.y, -417 + random.nextInt(5) - 3);
-                } while ((optimalTarget.x == -501 && optimalTarget.z >= -414)); // don't pick any pos within the church
-            }
-            if (this.mob.distanceTo(optimalTarget.x, optimalTarget.y, optimalTarget.z) > 1) {
-                this.ignoringChance = true; // makes it so canStart does not return false early
+        if (this.mob instanceof VillagerEntity) {
+            if (((VillagerEntity) this.mob).profession() == 2 && this.mob.ticksAlive > waitTicks && !((IVillager) this.mob).hasTraded()) {
+                if (this.optimalTarget == null) {
+                    Random random = new Random();
+                    optimalTarget = new Vec3d(-254 + random.nextInt(4), this.mob.y, -398 + random.nextInt(4));
+                }
+                if (this.mob.distanceTo(optimalTarget.x, optimalTarget.y, optimalTarget.z) > 1) {
+                    this.ignoringChance = true; // makes it so canStart does not return false early
+                }
+            } else if (((VillagerEntity)this.mob).profession() == 1) {
+                cir.setReturnValue(false);
             }
         }
     }

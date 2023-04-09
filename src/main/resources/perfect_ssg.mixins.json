@@ -14,8 +14,9 @@
     "loot.tnt.TNTItemRNGMixin",
     "loot.tnt.TNTDropsMixin",
     "loot.tnt.TNTDropsPressurePlateMixin",
-    "villager.VillagerRoutingMixin",
-    "villager.VillagerEntityMixin",
+    "passive_mob.PassiveMobRoutingMixin",
+    "passive_mob.VillagerEntityMixin",
+    "passive_mob.WolfAttackSheepMixin",
     "hostile_mob.SpawnOneSilverfishMixin",
     "hostile_mob.StopHostileEntitySpawnsMixin",
     "loot.ItemDropRNGMixin"

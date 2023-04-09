@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin.villager;
+package me.pixfumy.perfect_ssg.mixin.passive_mob;
 
 import me.pixfumy.perfect_ssg.IVillager;
 import net.minecraft.block.Blocks;
@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(VillagerEntity.class)

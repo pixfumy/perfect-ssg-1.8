@@ -1,8 +1,9 @@
-package me.pixfumy.perfect_ssg.mixin.villager;
+package me.pixfumy.perfect_ssg.mixin.passive_mob;
 
 import me.pixfumy.perfect_ssg.IVillager;
 import net.minecraft.entity.PathAwareEntity;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.util.RandomVectorGenerator;
 import net.minecraft.util.math.Vec3d;
@@ -16,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Random;
 
 @Mixin(WanderAroundGoal.class)
-public abstract class VillagerRoutingMixin {
+public abstract class PassiveMobRoutingMixin {
     @Shadow private PathAwareEntity mob;
 
     @Shadow private boolean ignoringChance;
@@ -38,6 +39,8 @@ public abstract class VillagerRoutingMixin {
             } else if (((VillagerEntity)this.mob).profession() == 1) {
                 cir.setReturnValue(false);
             }
+        } else if (this.mob instanceof SheepEntity) {
+            cir.setReturnValue(false);
         }
     }
 

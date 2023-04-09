@@ -29,7 +29,7 @@ public abstract class ItemDropRNGMixin extends Entity {
         }
         players.sort(Comparator.comparingDouble(player -> this.distanceTo(player)));
         PlayerEntity closestPlayer = players.get(0);
-        this.velocityX = MathHelper.clamp(closestPlayer.x - this.x, -0.1, 0.1);
-        this.velocityZ = MathHelper.clamp(closestPlayer.z - this.z, -0.1, 0.1);
+        this.velocityX = MathHelper.clamp(closestPlayer.x - this.x, -0.05, 0.05);
+        this.velocityZ = MathHelper.clamp(closestPlayer.z - this.z, -0.05, 0.05);
     }
 }

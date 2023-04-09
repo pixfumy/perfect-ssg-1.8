@@ -1,2 +1,8 @@
 accessWidener    v1     named
-accessible    class     net/minecraft/entity/passive/VillagerEntity$Cost
+accessible class net/minecraft/entity/passive/VillagerEntity$Cost
+accessible class net/minecraft/entity/passive/VillagerEntity$TradeProvider
+accessible class net/minecraft/entity/passive/VillagerEntity$EmeraldToItem
+accessible class net/minecraft/entity/passive/VillagerEntity$EnchantedBook
+accessible class net/minecraft/entity/passive/VillagerEntity$ItemTradeEntry
+accessible class net/minecraft/entity/passive/VillagerEntity$ItemStackTradeEntry
+accessible class net/minecraft/entity/passive/VillagerEntity$EnchantedItemStackTradeEntry

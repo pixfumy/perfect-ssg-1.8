@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "access.SpawnerBlockEntityBehaviorAccess",
+    "access.InGameHudAccess",
     "dragon.EnderDragonEntityMixin",
     "dragon.ShorterEndCrystalsMixin",
     "loot.MobDropMaxLootMixin",

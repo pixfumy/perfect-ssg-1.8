@@ -1,6 +1,7 @@
 package me.pixfumy.perfect_ssg.mixin.dragon;
 
 import me.pixfumy.perfect_ssg.Pingable;
+import me.pixfumy.perfect_ssg.mixin.access.InGameHudAccess;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.DebugHud;
 import net.minecraft.world.gen.feature.FillerBlockFeature;
@@ -13,7 +14,7 @@ import java.util.Random;
 public class ShorterEndCrystalsMixin {
     @Redirect(method = "generate", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 0))
     private int shorterEndCrystal(Random instance, int bound) {
-        ((Pingable)MinecraftClient.getInstance().inGameHud.debugHud).notifyListeners();
+        ((Pingable) ((InGameHudAccess)MinecraftClient.getInstance().inGameHud).getDebugHud()).notifyListeners();
         return instance.nextInt(16);
     }
 }

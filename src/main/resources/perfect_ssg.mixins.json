@@ -4,18 +4,19 @@
   "package": "me.pixfumy.perfect_ssg.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "access.InGameHudAccess",
     "access.SpawnerBlockEntityBehaviorAccess",
     "dragon.EnderDragonEntityMixin",
-    "dragon.ShorterEndCrystalsMixin",
+    "hostile_mob.SpawnOneSilverfishMixin",
+    "hostile_mob.StopHostileEntitySpawnsMixin",
     "loot.MobDropMaxLootMixin",
     "loot.tnt.TNTItemRNGMixin",
     "loot.tnt.TNTDropsMixin",
     "loot.tnt.TNTDropsPressurePlateMixin",
     "villager.VillagerRoutingMixin",
     "villager.VillagerEntityMixin",
-    "hostile_mob.SpawnOneSilverfishMixin",
-    "hostile_mob.StopHostileEntitySpawnsMixin",
-    "loot.ItemDropRNGMixin"
+    "loot.ItemDropRNGMixin",
+    "worldgen.ShorterEndCrystalsMixin"
   ],
   "client": [
   ],

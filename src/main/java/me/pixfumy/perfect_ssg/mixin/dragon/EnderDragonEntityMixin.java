@@ -2,6 +2,7 @@ package me.pixfumy.perfect_ssg.mixin.dragon;
 
 import me.pixfumy.perfect_ssg.PerfectSSG;
 import me.pixfumy.perfect_ssg.Pingable;
+import me.pixfumy.perfect_ssg.mixin.access.InGameHudAccess;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
@@ -69,6 +70,6 @@ public abstract class EnderDragonEntityMixin extends Entity {
             d5 = 10.0;
         }
         this.field_3751 = this.target.getBoundingBox().minY + d5;
-        ((Pingable) MinecraftClient.getInstance().inGameHud.debugHud).notifyListeners();
+        ((Pingable)((InGameHudAccess)(MinecraftClient.getInstance().inGameHud)).getDebugHud()).notifyListeners();
     }
 }

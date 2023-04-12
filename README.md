@@ -9,10 +9,11 @@
 - Items will drop towards the closest player.
 - TNT drops 40% of the blocks it destroys instead of 25%, and always drops the pressure plate from the temple.
 - Hostile mobs will not spawn in the overworld.
-- Only one silverfish will spawn per spawn cycle.
+- Only one silverfish/blaze will spawn per spawn cycle from a mob spawner
 - wolves will not attack sheep
 - breaking gravel will always drop flint
 - sheep and librarian villagers will not move from their initial position
+- Water does not freeze into ice after initial worldgen
 
 
 ## License

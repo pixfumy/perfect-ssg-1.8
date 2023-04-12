@@ -14,7 +14,6 @@ import java.util.Random;
 public class ShorterEndCrystalsMixin {
     @Redirect(method = "generate", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 0))
     private int shorterEndCrystal(Random instance, int bound) {
-        ((Pingable) ((InGameHudAccess)MinecraftClient.getInstance().inGameHud).getDebugHud()).notifyListeners();
         return instance.nextInt(16);
     }
 }

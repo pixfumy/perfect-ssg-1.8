@@ -1,7 +1,5 @@
 # Perfect SSG for 1.8
 
-### Not compatible with optifine currently, I'm not sure why.
-
 ## Features
 - The gold trade is always 8 emeralds, eye trade is always 7 emeralds
 - The cleric will path optimally on paper and desert seeds

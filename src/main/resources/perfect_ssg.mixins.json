@@ -4,10 +4,9 @@
   "package": "me.pixfumy.perfect_ssg.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "access.SpawnerBlockEntityBehaviorAccess",
     "access.InGameHudAccess",
     "dragon.EnderDragonEntityMixin",
-    "hostile_mob.SpawnOneSilverfishMixin",
+    "hostile_mob.SpawnOneSilverfishOrBlazeMixin",
     "hostile_mob.StopHostileEntitySpawnsMixin",
     "loot.MobDropMaxLootMixin",
     "loot.GuaranteedFlintMixin",

@@ -1,4 +1,4 @@
-package me.pixfumy.perfect_ssg.mixin.dragon;
+package me.pixfumy.perfect_ssg.mixin.worldgen;
 
 import me.pixfumy.perfect_ssg.Pingable;
 import me.pixfumy.perfect_ssg.mixin.access.InGameHudAccess;

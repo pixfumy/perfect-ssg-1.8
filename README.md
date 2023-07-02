@@ -13,4 +13,4 @@
 
 
 ## License
-This mod is available under the GPL3 license. Praise Stallman.
+This mod is available under the LGPL3 license. Praise Stallman.
